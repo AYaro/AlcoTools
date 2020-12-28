@@ -2,5 +2,12 @@
     <string name="app_name">AlcoTools</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_drinks_list">Drinks list</string>
+    <string name="test_string_image_of_a_drink">image of a drink</string>
+    <string name="test_string_element_drink_preview_name">drink preview name</string>
+    <string name="test_string_element_drink_preview_description">drink preview description</string>
+    <string name="test_string_element_drink_alcohol_rate">drink alcohol rate</string>
+    <string name="test_string_element_drink_portion_ml">Portion ml</string>
+    <string name="test_string_element_drink_ingredients_list">Ingredients list</string>
+    <string name="poster">poster</string>
 </resources>

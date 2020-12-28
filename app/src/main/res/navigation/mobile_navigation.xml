@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.alcotools.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_drinks_list"
+        android:name="com.example.alcotools.ui.drinksList.DrinksListFragment"
+        android:label="@string/title_drinks_list"
+        tools:layout="@layout/fragment_drinks_list" />
 </navigation>
