@@ -10,4 +10,8 @@
     <string name="test_string_element_drink_portion_ml">Portion ml</string>
     <string name="test_string_element_drink_ingredients_list">Ingredients list</string>
     <string name="poster">poster</string>
+    <string name="services">Сервисы</string>
+    <string name="settings_name">Настройки</string>
+    <string name="image_of_settings">Image of settings</string>
+    <string name="name_of_dash_element">Name</string>
 </resources>

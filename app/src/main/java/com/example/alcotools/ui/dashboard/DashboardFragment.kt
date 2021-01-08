@@ -8,7 +8,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.R
+import com.example.alcotools.ui.drinksList.DataStorage
 
 class DashboardFragment : Fragment() {
 
@@ -27,5 +30,16 @@ class DashboardFragment : Fragment() {
             textView.text = it
         })
         return root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        val elements = ElementsStorage.getElementsList()
+        val adapter = DashElementAdapter(this.requireContext(), elements)
+        val list = this.activity?.findViewById<RecyclerView>(R.id.serviceRecyclerView)
+        list?.adapter = adapter
+//        val decoration = DividerItemDecoration(this.requireContext(), DividerItemDecoration.HORIZONTAL)
+//        list?.addItemDecoration(decoration)
+        // todo onclick intent add toggle button
     }
 }
