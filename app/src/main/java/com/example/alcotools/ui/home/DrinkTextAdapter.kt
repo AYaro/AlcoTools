@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.MainActivity
 import com.example.alcotools.R
-import com.example.alcotools.ui.drinksList.Drink
+import com.example.alcotools.model.Drink
 import com.example.alcotools.ui.drinksList.OpenDrinkDetailsListener
 
 //import com.like.LikeButton

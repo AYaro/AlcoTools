@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.R
-import com.example.alcotools.ui.drinksList.DataStorage
+import com.example.alcotools.controller.DataStorage
 
 class HomeFragment : Fragment() {
 

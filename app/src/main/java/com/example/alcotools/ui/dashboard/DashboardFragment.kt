@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.R
-import com.example.alcotools.ui.drinksList.DataStorage
 
 class DashboardFragment : Fragment() {
 

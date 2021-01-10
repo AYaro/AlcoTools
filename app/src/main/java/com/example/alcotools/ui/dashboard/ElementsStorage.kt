@@ -1,7 +1,6 @@
 package com.example.alcotools.ui.dashboard
 
 import com.example.alcotools.R
-import com.example.alcotools.ui.drinksList.Drink
 
 object ElementsStorage {
 
