@@ -24,6 +24,24 @@ object DataStorage {
                         50.toFloat(),
                         1.56.toFloat(),
                         true
+                ),
+                Drink(
+                        "Джин-тоник",
+                        R.drawable.tonik,
+                        "Классика, чистый джин и тоник, что может быть лучше",
+                        "Джин",
+                        250.toFloat(),
+                        7.8125.toFloat(),
+                        true
+                ),
+                Drink(
+                        "Гараж",
+                        R.drawable.garage,
+                        "Просто гараж",
+                        "Изучаются",
+                        440.toFloat(),
+                        9.375.toFloat(),
+                        true
                 )
         )
     }
