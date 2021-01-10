@@ -5,6 +5,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alcotools.R
+import com.example.alcotools.model.Drink
+
 //import com.like.LikeButton
 
 class DrinkRecipeActivity : AppCompatActivity() {

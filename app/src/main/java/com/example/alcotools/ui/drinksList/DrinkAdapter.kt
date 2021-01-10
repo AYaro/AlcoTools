@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.MainActivity
 import com.example.alcotools.R
+import com.example.alcotools.model.Drink
+
 //import com.like.LikeButton
 
 class DrinkAdapter(private val context: Context, private val drinks: List<Drink>)
@@ -31,7 +33,7 @@ class DrinkAdapter(private val context: Context, private val drinks: List<Drink>
     }
 
     fun onOpenDrinkDetailsListenerClicked(drink: Drink) {
-        println("DrinkAdapter onOpenDrinkDetailsListenerClicked")
+        println("DrinkAdapter - onOpenDrinkDetailsListenerClicked")
         listener?.onOpenDrinkDetailsListenerClicked(drink)
     }
 

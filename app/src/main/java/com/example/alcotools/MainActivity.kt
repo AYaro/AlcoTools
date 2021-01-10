@@ -8,7 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.alcotools.ui.drinksList.Drink
+import com.example.alcotools.model.Drink
 import com.example.alcotools.ui.drinksList.DrinkRecipeActivity
 import com.example.alcotools.ui.drinksList.OpenDrinkDetailsListener
 

@@ -1,4 +1,4 @@
-package com.example.alcotools.ui.drinksList
+package com.example.alcotools.model
 
 import androidx.annotation.DrawableRes
 import java.io.Serializable
