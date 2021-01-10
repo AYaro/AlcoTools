@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:id="@+id/drinksList"
-    tools:listitem="@layout/element_drink_preview"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+    tools:context=".MainActivity">
 
-</androidx.recyclerview.widget.RecyclerView>
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--        android:id="@+id/fab"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="bottom|end"-->
-    <!--        android:layout_margin="@dimen/activity_vertical_margin"-->
-    <!--        android:contentDescription="TODO" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drinksList"
+        tools:listitem="@layout/element_drink_preview"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="64dp"
+        app:srcCompat="@drawable/ic_add" />
+</FrameLayout>

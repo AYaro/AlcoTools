@@ -11,7 +11,7 @@ import com.example.alcotools.MainActivity
 import com.example.alcotools.R
 import com.example.alcotools.model.Drink
 
-//import com.like.LikeButton
+import com.like.LikeButton
 
 class DrinkAdapter(private val context: Context, private val drinks: List<Drink>)
     : RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
@@ -48,7 +48,8 @@ class DrinkAdapter(private val context: Context, private val drinks: List<Drink>
         private val portion: TextView = itemView.findViewById(R.id.elementDrinkPreviewPortionMl)
         private val alcohol: TextView = itemView.findViewById(R.id.elementDrinkPreviewAlcohol)
         private val description: TextView = itemView.findViewById(R.id.elementDrinkPreviewDescription)
-//        private val liked: LikeButton = itemView.findViewById(R.id.elementDrinkPreviewHeartButton)
+        private val liked: LikeButton = itemView.findViewById(R.id.elementDrinkPreviewHeartButton)
+        private val dose: String = "Dose: "
 
         fun bind(drink: Drink) {
             println("ViewHolder - bind")
@@ -56,10 +57,10 @@ class DrinkAdapter(private val context: Context, private val drinks: List<Drink>
             image.setImageResource(drink.image)
             title.text = drink.title
             ingredientsList.text = drink.ingredientsList
-            alcohol.text = drink.alcoholDose.toString()
-            portion.text = drink.portionMl.toString()
+            alcohol.text = dose.plus(drink.alcoholDose.toString())
+            portion.text = drink.portionMl.toString().plus(" ml")
             description.text = drink.description
-//            liked.isLiked = drink.liked
+            liked.isLiked = drink.liked
         }
     }
 }

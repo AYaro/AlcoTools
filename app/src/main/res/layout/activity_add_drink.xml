@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView tools:text="@tools:sample/lorem"
-    tools:context=".ui.drinksList.DrinkRecipeActivity"
+    tools:context=".ui.drinksList.AddNewDrinkActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:id="@+id/fragmentDrinksListScrollView"
@@ -51,54 +51,74 @@
             app:layout_constraintHorizontal_bias="0.75"
             app:is_enabled="true"/>
 
-        <TextView
+        <EditText
             android:id="@+id/elementDrinkRecipeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/test_string_element_drink_preview_name"
+            android:hint="@string/test_string_element_drink_preview_name"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@id/poster"
             app:layout_constraintStart_toEndOf="@id/elementDrinkRecipeImageView"
             app:layout_constraintTop_toBottomOf="@id/poster" />
 
-        <TextView
+        <EditText
             android:id="@+id/elementDrinkRecipeAlcohol"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="@string/test_string_element_drink_alcohol_rate"
+            android:hint="@string/test_string_element_drink_alcohol_rate"
             app:layout_constraintStart_toStartOf="@id/elementDrinkRecipeTitle"
             app:layout_constraintTop_toBottomOf="@id/elementDrinkRecipeTitle" />
 
-        <TextView
+        <EditText
             android:id="@+id/elementDrinkRecipePortionMl"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="15dp"
-            android:text="@string/test_string_element_drink_portion_ml"
+            android:hint="@string/test_string_element_drink_portion_ml"
             app:layout_constraintStart_toStartOf="@id/elementDrinkRecipeAlcohol"
             app:layout_constraintTop_toBottomOf="@id/elementDrinkRecipeAlcohol" />
 
-        <TextView
+        <EditText
             android:id="@+id/elementDrinkRecipeIngredientsList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginVertical="15dp"
-            android:text="@string/test_string_element_drink_ingredients_list"
+            android:hint="@string/test_string_element_drink_ingredients_list"
             app:layout_constraintStart_toStartOf="@id/elementDrinkRecipeImageView"
             app:layout_constraintTop_toBottomOf="@id/elementDrinkRecipeImageView" />
 
-        <TextView
+        <EditText
             android:id="@+id/elementDrinkRecipeDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="15dp"
             app:layout_constraintTop_toBottomOf="@id/elementDrinkRecipeIngredientsList"
-            tools:text="@tools:sample/lorem/random[0]" />
+            tools:hint="Drink recipe description" />
+
+        <Button
+            android:id="@+id/buttonExitAddDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/elementDrinkRecipeDescription" />
+
+        <Button
+            android:id="@+id/buttonAddNewDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/elementDrinkRecipeDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

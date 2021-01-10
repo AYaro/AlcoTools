@@ -1,20 +1,18 @@
 package com.example.alcotools.ui.drinksList
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.Nullable
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alcotools.R
 import com.example.alcotools.controller.DataStorage
 //import com.example.alcotools.controller.DrinkViewModel
-import com.example.alcotools.model.Drink
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DrinksListFragment : Fragment() {
 
@@ -39,12 +37,17 @@ class DrinksListFragment : Fragment() {
         decoration.setDrawable(ContextCompat.getDrawable(this.requireContext(), R.color.purple_700)!!)
         list?.addItemDecoration(decoration)
 
+            //todo database
 //        drinkViewModel.allItems.observe(this, object: Observer<List<Drink>> {
 //            override fun onChanged(@Nullable drinks: List<Drink>) {
 //                adapter.setDrinks(drinks)
 //            }
 //        })
 
-        // todo onclick intent add toggle button
+        val buttonAddDrink = this.activity?.findViewById<FloatingActionButton>(R.id.add_drink)
+        buttonAddDrink?.setOnClickListener {
+            val intent = Intent(this.activity, AddNewDrinkActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

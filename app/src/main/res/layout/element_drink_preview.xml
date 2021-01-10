@@ -72,19 +72,20 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
-<!--        <com.like.LikeButton-->
-<!--            android:id="@+id/elementDrinkPreviewHeartButton"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            app:icon_size="25dp"-->
-<!--            app:icon_type="heart"-->
-<!--            app:layout_constraintBottom_toBottomOf="@id/elementDrinkPreviewImageView"-->
-<!--            app:layout_constraintEnd_toEndOf="@id/elementDrinkPreviewImageView"-->
-<!--            app:layout_constraintStart_toStartOf="@id/elementDrinkPreviewImageView"-->
-<!--            app:layout_constraintTop_toTopOf="@id/elementDrinkPreviewImageView"-->
-<!--            app:layout_constraintVertical_bias="0.75"-->
-<!--            app:layout_constraintHorizontal_bias="0.75" />-->
+        <com.like.LikeButton
+            android:id="@+id/elementDrinkPreviewHeartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:icon_size="10dp"
+            app:icon_type="heart"
+            app:layout_constraintBottom_toBottomOf="@id/elementDrinkPreviewImageView"
+            app:layout_constraintEnd_toEndOf="@id/elementDrinkPreviewImageView"
+            app:layout_constraintStart_toStartOf="@id/elementDrinkPreviewImageView"
+            app:layout_constraintTop_toTopOf="@id/elementDrinkPreviewImageView"
+            app:layout_constraintVertical_bias="0.75"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:is_enabled="true"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

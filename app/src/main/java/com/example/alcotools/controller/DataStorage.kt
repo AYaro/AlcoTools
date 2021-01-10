@@ -9,7 +9,7 @@ object DataStorage {
         return listOf(
                 Drink(
                         "Виски-кола",
-                        R.drawable.ic_launcher_background,
+                        R.drawable.whisky_cola,
                         "В равных пропорциях смешиваем виски с колой",
                         "Виски, кола",
                         300.toFloat(),
@@ -18,7 +18,7 @@ object DataStorage {
                 ),
                 Drink(
                         "Водка",
-                        R.drawable.ic_launcher_background,
+                        R.drawable.vodka,
                         "Просто водка, лучше из морозилки",
                         "Водка",
                         50.toFloat(),
