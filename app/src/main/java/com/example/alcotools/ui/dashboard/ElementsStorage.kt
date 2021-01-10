@@ -7,25 +7,25 @@ object ElementsStorage {
     fun getElementsList(): List<DashElement> {
         return listOf(
             DashElement(
-                "Настройки",
+                "Изменить параметры",
                 R.drawable.ic_launcher_background,
                 "",
                 1
             ),
             DashElement(
-                "Выйти от сюда",
+                "Выход из приожения",
                 R.drawable.ic_launcher_background,
                 "",
                 1
             ),
             DashElement(
-                "Тесты",
+                "Тест на опьянение",
                 R.drawable.ic_launcher_background,
                 "",
                 0
             ),
             DashElement(
-                "Начать пить",
+                "История",
                 R.drawable.ic_launcher_background,
                 "",
                 0
