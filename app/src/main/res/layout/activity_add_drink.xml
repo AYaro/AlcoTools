@@ -65,7 +65,7 @@
 
         <EditText
             android:id="@+id/elementDrinkRecipeAlcohol"
-            android:layout_width="100dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:hint="@string/test_string_element_drink_alcohol_rate"
@@ -74,7 +74,7 @@
 
         <EditText
             android:id="@+id/elementDrinkRecipePortionMl"
-            android:layout_width="100dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="15dp"
             android:hint="@string/test_string_element_drink_portion_ml"
