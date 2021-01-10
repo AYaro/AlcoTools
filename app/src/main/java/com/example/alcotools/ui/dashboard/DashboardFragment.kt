@@ -24,21 +24,21 @@ class DashboardFragment : Fragment() {
         dashboardViewModel =
                 ViewModelProvider(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = root.findViewById(R.id.text_dashboard)
+//        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        val elements = ElementsStorage.getElementsList()
-        val adapter = DashElementAdapter(this.requireContext(), elements)
-        val list = this.activity?.findViewById<RecyclerView>(R.id.serviceRecyclerView)
-        list?.adapter = adapter
-//        val decoration = DividerItemDecoration(this.requireContext(), DividerItemDecoration.HORIZONTAL)
-//        list?.addItemDecoration(decoration)
-        // todo onclick intent add toggle button
-    }
+//    override fun onActivityCreated(savedInstanceState: Bundle?) {
+//        super.onActivityCreated(savedInstanceState)
+//        val elements = ElementsStorage.getElementsList()
+//        val adapter = DashElementAdapter(this.requireContext(), elements)
+//        val list = this.activity?.findViewById<RecyclerView>(R.id.serviceRecyclerView)
+//        list?.adapter = adapter
+////        val decoration = DividerItemDecoration(this.requireContext(), DividerItemDecoration.HORIZONTAL)
+////        list?.addItemDecoration(decoration)
+//        // todo onclick intent add toggle button
+//    }
 }

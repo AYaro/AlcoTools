@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AlcoTools</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_drinks_list">Drinks list</string>
+    <string name="title_home">Пить</string>
+    <string name="title_dashboard">История</string>
+    <string name="title_drinks_list">Каталог</string>
     <string name="test_string_image_of_a_drink">image of a drink</string>
     <string name="test_string_element_drink_preview_name">drink preview name</string>
     <string name="test_string_element_drink_preview_description">drink preview description</string>
