@@ -1,6 +1,7 @@
 package com.example.alcotools.ui.drinksList
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,12 +14,18 @@ import com.example.alcotools.model.Drink
 
 import com.like.LikeButton
 
-class DrinkAdapter(private val context: Context, private val drinks: List<Drink>)
-    : RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
+class DrinkAdapter(private val context: Context) : RecyclerView.Adapter<DrinkAdapter.ViewHolder>() {
 
     private var listener: OpenDrinkDetailsListener? = null
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
+
+    private var drinks: List<Drink> = emptyList()
+
+    fun setDrinks(drinks: List<Drink>) {
+        this.drinks = drinks
+        this.notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         if (context is MainActivity) {
@@ -28,8 +35,8 @@ class DrinkAdapter(private val context: Context, private val drinks: List<Drink>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position))
-        holder.itemView.setOnClickListener { onOpenDrinkDetailsListenerClicked(getItem(position)) }
+        holder.bind(getDrink(position))
+        holder.itemView.setOnClickListener { onOpenDrinkDetailsListenerClicked(getDrink(position)) }
     }
 
     fun onOpenDrinkDetailsListenerClicked(drink: Drink) {
@@ -39,22 +46,25 @@ class DrinkAdapter(private val context: Context, private val drinks: List<Drink>
 
     override fun getItemCount(): Int = drinks.size
 
-    private fun getItem(position: Int): Drink = drinks[position]
+    fun getDrink(position: Int): Drink = drinks[position]
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val image: ImageView = itemView.findViewById(R.id.elementDrinkPreviewImageView)
-        private val title: TextView = itemView.findViewById(R.id.elementDrinkPreviewTitle)
-        private val ingredientsList: TextView = itemView.findViewById(R.id.elementDrinkPreviewIngredientsList)
-        private val portion: TextView = itemView.findViewById(R.id.elementDrinkPreviewPortionMl)
-        private val alcohol: TextView = itemView.findViewById(R.id.elementDrinkPreviewAlcohol)
-        private val description: TextView = itemView.findViewById(R.id.elementDrinkPreviewDescription)
-        private val liked: LikeButton = itemView.findViewById(R.id.elementDrinkPreviewHeartButton)
+    class ViewHolder(drinkView: View): RecyclerView.ViewHolder(drinkView) {
+        private val image: ImageView = drinkView.findViewById(R.id.elementDrinkPreviewImageView)
+        private val title: TextView = drinkView.findViewById(R.id.elementDrinkPreviewTitle)
+        private val ingredientsList: TextView = drinkView.findViewById(R.id.elementDrinkPreviewIngredientsList)
+        private val portion: TextView = drinkView.findViewById(R.id.elementDrinkPreviewPortionMl)
+        private val alcohol: TextView = drinkView.findViewById(R.id.elementDrinkPreviewAlcohol)
+        private val description: TextView = drinkView.findViewById(R.id.elementDrinkPreviewDescription)
+        private val liked: LikeButton = drinkView.findViewById(R.id.elementDrinkPreviewHeartButton)
         private val dose: String = "Dose: "
 
         fun bind(drink: Drink) {
             println("ViewHolder - bind")
-
-            image.setImageResource(drink.image)
+            if (drink.custom) {
+                image.setImageURI(Uri.parse(drink.imageUri))
+            } else {
+                image.setImageResource(drink.image!!)
+            }
             title.text = drink.title
             ingredientsList.text = drink.ingredientsList
             alcohol.text = dose.plus(drink.alcoholDose.toString())

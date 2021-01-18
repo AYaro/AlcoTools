@@ -1,6 +1,10 @@
 package com.example.alcotools.ui.drinksList
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +27,20 @@ class DrinkRecipeActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.elementDrinkRecipeDescription).text = drink.description
         findViewById<TextView>(R.id.elementDrinkRecipePortionMl).text = drink.portionMl.toString().plus(" ml")
         findViewById<TextView>(R.id.elementDrinkRecipeIngredientsList).text = drink.ingredientsList
-        findViewById<ImageView>(R.id.elementDrinkRecipeImageView).setImageResource(drink.image)
         findViewById<LikeButton>(R.id.elementDrinkPreviewHeartButton).isLiked = drink.liked
+
+        val editBtn: Button = findViewById(R.id.editDrinkButton)
+        if (drink.custom) {
+            findViewById<ImageView>(R.id.elementDrinkRecipeImageView).setImageURI(Uri.parse(drink.imageUri))
+            editBtn.setOnClickListener {
+                val editIntent = Intent(this, AddNewDrinkActivity::class.java)
+                editIntent.putExtra("drink", drink)
+                this.startActivity(editIntent)
+            }
+            editBtn.visibility = View.VISIBLE
+        } else {
+            findViewById<ImageView>(R.id.elementDrinkRecipeImageView).setImageResource(drink.image!!)
+            editBtn.visibility = View.GONE
+        }
     }
 }
